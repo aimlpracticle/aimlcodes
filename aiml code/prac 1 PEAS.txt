@@ -1,0 +1,56 @@
+
+class SmartHomeAgent:
+
+    def __init__(self):
+        print("===== SMART HOME INTELLIGENT AGENT =====")
+
+    def display_peas(self):
+        print("\nPEAS Representation")
+        print("--------------------------")
+
+        print("Performance Measure:")
+        print("- Save electricity")
+        print("- Maintain comfortable temperature")
+        print("- Ensure home security")
+
+        print("\nEnvironment:")
+        print("- Home rooms")
+        print("- Temperature")
+        print("- Motion")
+        print("- Light")
+
+        print("\nActuators:")
+        print("- Switch Lights ON/OFF")
+        print("- Turn AC ON/OFF")
+
+        print("\nSensors:")
+        print("- Motion Sensor")
+        print("- Temperature Sensor")
+        print("- Light Sensor")
+
+    def run(self):
+        print("\nEnter Current Home Conditions")
+
+        motion = input("Is motion detected? (yes/no): ").lower()
+        light = input("Is it dark? (yes/no): ").lower()
+        temperature = float(input("Enter room temperature (°C): "))
+
+        print("\nAgent Decision")
+        print("--------------------------")
+
+        if motion == "yes" and light == "yes":
+            print("Light --> ON")
+        else:
+            print("Light --> OFF")
+
+        if temperature > 28:
+            print("AC --> ON")
+        else:
+            print("AC --> OFF")
+
+        print("\nTask Completed Successfully!")
+
+
+agent = SmartHomeAgent()
+agent.display_peas()
+agent.run()
